@@ -1,118 +1,26 @@
-import Image from "next/image"
+import NextImage from "@/components/Image"
 
 export default function Work() {
+    let chamber = ["/images/chamber/chamber_hero.png", "/images/chamber/chamber_mag.png", "/images/chamber/chamber_panel.png", "/images/chamber/chamber_full.png"];
+    let chilifest = ["/images/chilifest/chilifest_hero.png", "/images/chilifest/chilifest_home.png", "/images/chilifest/chilifest_photos.png"];
+    let discord = ["/images/AI/AI_chaos.jpeg", "/images/AI/AI_dog.jpeg", "/images/AI/AI_potato.jpeg", "/images/AI/AI_turkey.jpeg", "/images/AI/AI_twilight.jpeg", "/images/AI/AI_nerd.jpeg", "/images/AI/AI_washington.jpeg", "/images/AI/AI_chaos.jpeg"]
+
     return (
         <div className="work-container">
             <div className="chamber">
-                <Image
-                className="pb-8"
-                src="/images/chamber/chamber_hero.png"
-                alt="Chamber Hero"
-                width={900}
-                height={900}
-                />
-                <Image
-                className="pb-8"
-                src="/images/chamber/chamber_mag.png"
-                alt="Chamber Hero"
-                width={900}
-                height={900}
-                />
-                <Image
-                className="pb-8"
-                src="/images/chamber/chamber_panel.png"
-                alt="Chamber Hero"
-                width={900}
-                height={900}
-                />
-                <Image
-                className="pb-8"
-                src="/images/chamber/chamber_full.png"
-                alt="Chamber Hero"
-                width={900}
-                height={900}
-                />
+                {chamber.map((src, index) => (
+                    <NextImage key={index} src={src} />
+                ))}
             </div>
             <div className="chilifest">
-                <Image
-                    className="pb-8" 
-                    src="/images/chilifest/chilifest_hero.png"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                    className="pb-8"
-                    src="/images/chilifest/chilifest_home.png"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                    className="pb-8"
-                    src="/images/chilifest/chilifest_photos.png"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
+                {chilifest.map((src, index) => (
+                    <NextImage key={index} src={src} />
+                ))}
             </div>
             <div className="discord">
-                <Image 
-                    className="pb-8"
-                    src="/images/AI/AI_chaos.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                className="pb-8"
-                    src="/images/AI/AI_dog.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                                <Image 
-                                className="pb-8"
-                    src="/images/AI/AI_nerd.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                className="pb-8"
-                    src="/images/AI/AI_potato.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                className="pb-8"
-                    src="/images/AI/AI_turkey.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                className="pb-8"
-                    src="/images/AI/AI_twilight.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                className="pb-8"
-                    src="/images/AI/AI_washington.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
-                <Image 
-                className="pb-8"
-                    src="/images/AI/AI_chaos.jpeg"
-                    alt="Chilifest Hero"
-                    width={900}
-                    height={900}
-                />
+                {discord.map((src, index) => (
+                    <NextImage key={index} src={src} />
+                ))}
             </div>
         </div>
 
